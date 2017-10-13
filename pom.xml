@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.kepuchina</groupId>
+    <artifactId>kpcbs</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>hadoop</module>
+        <module>data</module>
+        <module>kafka</module>
+        <module>storm</module>
+        <module>elasticsearch</module>
+        <module>zookeeper</module>
+        <module>test</module>
+        <module>spark</module>
+    </modules>
+    <!-- 设置打包格式-->
+    <packaging>pom</packaging>
+
+    <name>kpcbs</name>
+    <url>http://www.kepuchina.cn/</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <cdh.version>2.6.0-cdh5.12.0</cdh.version>
+        <spark.version>1.5.2</spark.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <!-- 使用CDH自己仓库-->
+    <repositories>
+        <repository>
+            <id>cloudera-releases</id>
+            <url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+
+
+</project>
